@@ -70,6 +70,19 @@ This is a **multiclass** malicious URL classification task.
 
 ---
 
+---
+
+## 📸 Figures / Assets
+
+![Comparison & Our Advantage](docs/assets/Comparison%20%26%20Our%20Advantage.png)
+
+![Baseline Comparison](docs/assets/Graph-comparison.png)
+
+[📄 Project Presentation (PDF)](docs/assets/Url%20classification%20presentation.pdf)
+
+---
+
+
 #  ✅ Proof the System is Running 
 
 Example output (your environment may differ):
@@ -169,3 +182,4 @@ For full troubleshooting instructions go to this file in root:
 This project was built as part of the academic course:
 **Cyber Attack Detection Methods**.  
 It demonstrates both **ML performance** and a **distributed, queue-based architecture** under Docker.
+
