@@ -1,0 +1,41 @@
+# URL-Detector/docker-compose.yaml
+
+services:
+  # Message Broker
+  redis:
+    image: redis:alpine
+    ports:
+      - "6379:6379"
+
+  # API Service
+  backend:
+    build: ./backend
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./backend:/app
+    environment:
+      - CELERY_BROKER_URL=redis://redis:6379/0
+      - CELERY_RESULT_BACKEND=redis://redis:6379/0
+    depends_on:
+      - redis
+
+  # Background Worker
+  worker:
+    build: ./worker
+    volumes:
+      - ./worker:/app
+      - ./backend/models:/app/models # Shared access to models and features
+    environment:
+      - CELERY_BROKER_URL=redis://redis:6379/0
+      - CELERY_RESULT_BACKEND=redis://redis:6379/0
+    depends_on:
+      - redis
+
+  # Web UI
+  frontend:
+    image: nginx:alpine
+    ports:
+      - "8080:80"
+    volumes:
+      - ./frontend:/usr/share/nginx/html

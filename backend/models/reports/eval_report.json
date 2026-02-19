@@ -1,0 +1,193 @@
+{
+  "run_id": "20260107_122602",
+  "timing": {
+    "dataset_load": 2.5370902469999237,
+    "normalize_urls": 17.70887790200004,
+    "split": 1.1101895380002134,
+    "lm_build": 64.94849418900003,
+    "featurize_train": 2763.877154163,
+    "featurize_val": 674.629853855,
+    "featurize_test": 848.344564344,
+    "rf_train": 1919.2257221549999,
+    "calibration": 9.202623114000744,
+    "total": 6321.610824973999
+  },
+  "config": {
+    "sample_size": 0,
+    "use_lm": true,
+    "use_trigram": true,
+    "trigram_buckets": 1024,
+    "lm_parts": [
+      "host",
+      "path",
+      "query"
+    ],
+    "lm_table_size": 400000,
+    "lm_max_urls": 120000,
+    "calibrate": true,
+    "calibrate_method": "sigmoid",
+    "progress_every": 25000,
+    "rf": {
+      "trees": 400,
+      "n_jobs": -1,
+      "verbose": 1,
+      "class_weight": "balanced",
+      "max_depth": "None"
+    }
+  },
+  "raw": {
+    "accuracy": 0.9549366933099916,
+    "macro_f1": 0.9429636629616233,
+    "phishing_recall": 0.8237700563170758,
+    "confusion_matrix": [
+      [
+        84012,
+        214,
+        6,
+        1389
+      ],
+      [
+        414,
+        18686,
+        0,
+        192
+      ],
+      [
+        115,
+        1,
+        6167,
+        221
+      ],
+      [
+        3051,
+        243,
+        23,
+        15505
+      ]
+    ]
+  },
+  "thresholded": {
+    "threshold": 0.3,
+    "accuracy": 0.9549366933099916,
+    "macro_f1": 0.9429636629616233,
+    "phishing_recall": 0.8237700563170758,
+    "confusion_matrix": [
+      [
+        84012,
+        214,
+        6,
+        1389
+      ],
+      [
+        414,
+        18686,
+        0,
+        192
+      ],
+      [
+        115,
+        1,
+        6167,
+        221
+      ],
+      [
+        3051,
+        243,
+        23,
+        15505
+      ]
+    ]
+  },
+  "threshold_scan_val": [
+    {
+      "threshold": 0.3,
+      "macro_f1": 0.9423809912951826,
+      "phishing_recall": 0.8200956302297782,
+      "accuracy": 0.9545642137996564
+    },
+    {
+      "threshold": 0.35,
+      "macro_f1": 0.9423809912951826,
+      "phishing_recall": 0.8200956302297782,
+      "accuracy": 0.9545642137996564
+    },
+    {
+      "threshold": 0.4,
+      "macro_f1": 0.9423740649315593,
+      "phishing_recall": 0.8197635808208261,
+      "accuracy": 0.954545018283729
+    },
+    {
+      "threshold": 0.45,
+      "macro_f1": 0.9423533033346034,
+      "phishing_recall": 0.8192987116482933,
+      "accuracy": 0.954545018283729
+    },
+    {
+      "threshold": 0.5,
+      "macro_f1": 0.9421331040135912,
+      "phishing_recall": 0.8167087262584672,
+      "accuracy": 0.9542570855448167
+    },
+    {
+      "threshold": 0.55,
+      "macro_f1": 0.9412495601607895,
+      "phishing_recall": 0.8086067206800371,
+      "accuracy": 0.9532685164745516
+    },
+    {
+      "threshold": 0.6,
+      "macro_f1": 0.9398293736979608,
+      "phishing_recall": 0.7991101075840085,
+      "accuracy": 0.9520112101813016
+    },
+    {
+      "threshold": 0.65,
+      "macro_f1": 0.9376303898883261,
+      "phishing_recall": 0.7885509363793333,
+      "accuracy": 0.950264418231901
+    },
+    {
+      "threshold": 0.7,
+      "macro_f1": 0.9354023353165343,
+      "phishing_recall": 0.7784566343471908,
+      "accuracy": 0.9483256711232256
+    },
+    {
+      "threshold": 0.75,
+      "macro_f1": 0.9327682964722214,
+      "phishing_recall": 0.7677646433789348,
+      "accuracy": 0.9463101419508403
+    },
+    {
+      "threshold": 0.8,
+      "macro_f1": 0.9278930383114712,
+      "phishing_recall": 0.7510957630495417,
+      "accuracy": 0.942557418587018
+    },
+    {
+      "threshold": 0.85,
+      "macro_f1": 0.921649636094819,
+      "phishing_recall": 0.7314384380395803,
+      "accuracy": 0.9378257239108944
+    },
+    {
+      "threshold": 0.9,
+      "macro_f1": 0.9105625235447516,
+      "phishing_recall": 0.7018860406428477,
+      "accuracy": 0.929619640851897
+    },
+    {
+      "threshold": 0.95,
+      "macro_f1": 0.8775838341976676,
+      "phishing_recall": 0.6292336299641387,
+      "accuracy": 0.9061147315986986
+    }
+  ],
+  "labels": {
+    "0": "benign",
+    "1": "defacement",
+    "2": "malware",
+    "3": "phishing"
+  }
+}

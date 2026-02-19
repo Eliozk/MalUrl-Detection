@@ -1,0 +1,6 @@
+# URL-Detector/worker/requirements.txt
+celery
+redis
+pandas
+scikit-learn
+tld

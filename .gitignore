@@ -1,0 +1,23 @@
+# IDE
+.idea/
+.vscode/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Env
+.env
+*.env
+
+# Big model (DO NOT COMMIT)
+backend/models/ml_model.pkl
+
+# Data (recommended: keep only small samples)
+backend/models/data/
+!backend/models/data/README.md
+!backend/models/data/sample_urls.csv
+
+# Reports runs (keep only final summary if you want)
+backend/models/reports/runs/

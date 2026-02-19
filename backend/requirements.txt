@@ -1,0 +1,9 @@
+# URL-Detector/backend/requirements.txt
+fastapi
+uvicorn
+celery
+redis
+pydantic
+pandas
+scikit-learn
+tld

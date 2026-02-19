@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Malicious URL Detector</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🛡️ Malicious URL Detector</h1>
+        <p>Enter a URL to check if it's safe, phishing, malware, or defacement.</p>
+
+        <div class="input-group">
+            <input type="text" id="urlInput" placeholder="https://example.com">
+            <button onclick="checkURL()" id="checkBtn">Analyze URL</button>
+        </div>
+
+        <div id="resultCard" class="result-card hidden">
+            <h3>Analysis Result:</h3>
+            <p id="statusText">Processing...</p>
+            <div id="predictionBadge" class="badge">Checking...</div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

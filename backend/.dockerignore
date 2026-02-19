@@ -1,0 +1,24 @@
+# big artifacts
+models/ml_model.pkl
+models/reports/
+reports/
+logs*/
+**/*.log
+
+# datasets if you don't want them in image build context
+data/*.csv
+data/**/*.csv
+
+# python junk
+__pycache__/
+**/__pycache__/
+*.pyc
+*.pyo
+
+# envs
+.venv/
+venv/
+
+# git
+.git/
+.gitignore
