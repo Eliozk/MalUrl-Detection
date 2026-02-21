@@ -62,6 +62,25 @@ docker compose ps
 
 ---
 
+---
+
+## 3.5) Dataset (Required for Training)
+
+This repository does **not** include the full dataset.
+
+Download the CSV from Kaggle:
+- https://www.kaggle.com/code/thaibaoui/project-ia-4/input
+
+You need:
+- `malicious_phish.csv`
+
+Place it at:
+- `backend/models/data/malicious_phish.csv`
+
+Then continue to Section 4 (Train Model).
+
+---
+
  ## 4) Train Model 
 This repo is code-first: the model is trained locally via Docker and saved under `backend/models/` due to volume mounts.
 
@@ -236,4 +255,5 @@ docker compose restart backend worker
 Then open:
  ```
 http://localhost:8080
+
  ```
