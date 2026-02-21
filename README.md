@@ -14,6 +14,22 @@ This repository includes a dedicated run guide:
 
 ---
 
+## 📦 Dataset (for Training)
+
+The full training dataset is **not included** in this repository.
+
+Download `malicious_phish.csv` from Kaggle:
+- https://www.kaggle.com/code/thaibaoui/project-ia-4/input
+
+Place the file here:
+- `backend/models/data/malicious_phish.csv`
+
+Then follow: **RUN_INSTRUCTIONS.md → Train Model**
+
+---
+
+---
+
 # 📦 Model Handling (Training inside Docker)
 
 ⚠️ **The trained model file is NOT included in this repository** (≈ **2GB**).  
@@ -182,4 +198,5 @@ For full troubleshooting instructions go to this file in root:
 This project was built as part of the academic course:
 **Cyber Attack Detection Methods**.  
 It demonstrates both **ML performance** and a **distributed, queue-based architecture** under Docker.
+
 
