@@ -14,8 +14,10 @@ __pycache__/
 # Big model (DO NOT COMMIT)
 backend/models/ml_model.pkl
 
-# Data (COMMIT this folder)
-# backend/models/data/
+# Data (keep only small samples + docs)
+backend/models/data/
+!backend/models/data/README.md
+!backend/models/data/sample_urls.csv
 
 # Reports runs (keep only final summary if you want)
 backend/models/reports/runs/
